@@ -15,15 +15,15 @@ class ForecastsController < ApplicationController
   end
 
   def update
-    @forescast = forescast.find_by(id: params[:id])
-    @forescast.high = params[:forescast][:high]
-    @forescast.low = params[:forescast][:low]
-    @forecast.average = params[:forecast][:average]
-    @forecast.body = params[:forecast][:body]
-    @forecast.image = params[:forecast][:image]
-    @forecast.zipcode = params[:forecast][:zipcode]
+    forescast = Forecast.find_by(id: params[:id])
+
+    forescast.high = params["high"]
+    forescast.low = params["low"]
+    forecast.body = params["body"]
+    forecast.image = params[:image]
+    forecasts.zipcode = params[:zipcode]
 
     @forecast.save
-    redirect_to "/forecasts"
+    render json: @forecast.as_json
   end
 end

@@ -1,6 +1,31 @@
+
+@hostname = http://localhost:3000/
+@port = 3000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+@modifiedBy = {{$processEnv USERNAME}}
+
 ###
 GET https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,precipitation&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_hours&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto
 
 
 ###
 GET https://geocode.maps.co/search?postalcode=11216&country=US
+
+
+###
+PATCH http://localhost:3000/forecasts/1.json
+Content-Type: application/json
+
+{
+  "zipcode": "06010",
+  "high": 29,
+  "low": 21,
+  "body": "so much snow",
+  "image": "holder"
+}
+
+
+###
+
