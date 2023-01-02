@@ -1,8 +1,0 @@
-<h1>All Forecasts</h1>
-<% @Forecasts.each do |forecast| %>
-  <h2><%= forecast.Zipcode %></h2>
-  <h1><%= forecast.Average %> </h1>
-  <p>High: <%= forecast.High %></p>
-  <p>Low: <%= forecast.Low %> </p>
-  <p> <%= forecast.body %> </p>
-<% end %>

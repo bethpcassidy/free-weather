@@ -1,0 +1,11 @@
+@forecasts.map do |forecast|
+{
+id: forecast.id,
+zipcode: forecast.zipcode,
+high: forecast.high,
+low: forecast.low,
+average: forecast.average,
+image: forecast.image,
+body: forecast.body
+}
+end
