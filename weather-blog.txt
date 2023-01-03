@@ -35,3 +35,11 @@ Backend
 - User model
 
 ------------------
+
+
+JAN 3rd 2022
+
+STATUS
+- I've finished basic CRUD actions for the forecasts controller which has lead me to thinking about how other tables will interact with the forecast table overall. 
+- I plan on creating assets for sunshine and snow and rain and pulling those up would be easiest in a separate table. 
+- If I want to save location data while weather variables change over time, would it not be easiest to to have a location table where I can keep geocode information (no reason to ping the geocode api every time I want an updated forecast).
