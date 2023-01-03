@@ -19,13 +19,27 @@ PATCH http://localhost:3000/forecasts/1.json
 Content-Type: application/json
 
 {
-  "zipcode": "06010",
   "high": 29,
   "low": 21,
-  "body": "so much snow",
-  "image": "holder"
+  "image": "holder",
+  "zipcode": "06010",
+  "body": "body"
 }
 
 
 ###
+POST http://localhost:3000/forecasts.json
+Content-Type: application/json
 
+{
+  "high": 44,
+  "low": 33,
+  "average": 39,
+  "image": "holder",
+  "zipcode": "06040",
+  "body": "body"
+}
+
+###
+DELETE http://localhost:3000/forecasts/4.json
+Content-Type: application/json
