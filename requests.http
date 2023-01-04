@@ -43,3 +43,12 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3000/forecasts/4.json
 Content-Type: application/json
+
+
+###
+POST POST http://localhost:3000/locations.json
+Content-Type: application/json
+
+{
+  "zipcode"
+}

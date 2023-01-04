@@ -1,0 +1,9 @@
+@locations.map do |location|
+{
+id: location.id,
+name: location.name,
+zipcode: location.zipcode,
+longitude: location.longitude,
+latitude: location.latitude
+}
+end

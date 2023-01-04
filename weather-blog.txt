@@ -37,9 +37,17 @@ Backend
 ------------------
 
 
-JAN 3rd 2022
+Tues JAN 3rd 2022
 
-STATUS
+First Updates
+
 - I've finished basic CRUD actions for the forecasts controller which has lead me to thinking about how other tables will interact with the forecast table overall. 
 - I plan on creating assets for sunshine and snow and rain and pulling those up would be easiest in a separate table. 
-- If I want to save location data while weather variables change over time, would it not be easiest to to have a location table where I can keep geocode information (no reason to ping the geocode api every time I want an updated forecast).
+- If I want to save location data while weather variables change over time, would it not be easiest to to have a location table where I can keep geocode information (no reason to ping the geocode api every time I want an updated forecast, might as well create a conditional to search the table for the zip code first, and then follow up on the ping if its not there).
+
+--
+
+Frontend
+- Generated the frontend and linked it with my backend and am a step away from create functionality.
+- I was getting stuck on some of my development so switching gears and catching up my frontend gave me some ground to stand on and move forward with what I am doing in the backend.
+	[ie: grabbing zipcode, generating forecast data, and adding it to your list of forecasts.]

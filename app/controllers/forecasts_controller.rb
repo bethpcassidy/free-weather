@@ -39,13 +39,16 @@ class ForecastsController < ApplicationController
   # end
 
   def create
+    zip = params[:zipcode]
+    response = HTTPX.get("https://geocode.maps.co/search?postalcode=#{zip}&country=US")
+
     forecast = Forecast.new(
-      high: params[:forecast][:high],
-      low: params[:forecast][:low],
-      body: params[:forecast][:body],
-      image: params[:forecast][:image],
-      average: params[:forecast][:average],
-      zipcode: params[:forecast][:zipcode],
+      high: params[:high],
+      low: params[:low],
+      body: response[:lon],
+      image: params[:image],
+      average: params[:average],
+      zipcode: zip,
     )
     forecast.save
     render json: forecast.as_json
