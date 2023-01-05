@@ -6,6 +6,7 @@ high: forecast.high,
 low: forecast.low,
 average: forecast.average,
 image: forecast.image,
-body: forecast.body
+body: forecast.body,
+title: forecast.title
 }
 end

@@ -51,3 +51,15 @@ Frontend
 - Generated the frontend and linked it with my backend and am a step away from create functionality.
 - I was getting stuck on some of my development so switching gears and catching up my frontend gave me some ground to stand on and move forward with what I am doing in the backend.
 	[ie: grabbing zipcode, generating forecast data, and adding it to your list of forecasts.]
+
+--------------
+
+Weds JAN 4th 2022
+
+API info Grabs
+
+- Set up my frontend for login/logouts/deletes/shows/basic modal
+- Real weather is showing up!
+- Information is being grabbed by backend with get requests and I spent the last portion of class getting it to print out basic weather data on the frontend.
+- Created a loop through hourly temperature change information to get a high low index on temperature
+- 
