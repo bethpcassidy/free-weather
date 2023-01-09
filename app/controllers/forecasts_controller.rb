@@ -3,7 +3,7 @@ class ForecastsController < ApplicationController
 
   def index
     if current_user
-      @forecasts = Forecast.all
+      @forecasts = Forecast.where(user_id: current_user.id)
     else
       render json: [], status: unauthorized
     end
@@ -67,6 +67,7 @@ class ForecastsController < ApplicationController
     name = name[0]
     name = name.to_s
     forecast = Forecast.new(
+      user_id: current_user.id,
       id: id,
       high: high,
       low: low,
@@ -137,6 +138,7 @@ class ForecastsController < ApplicationController
     name = name[0]
     name = name.to_s
     forecast = Forecast.new(
+      user_id: current_user.id,
       high: high,
       low: low,
       body: misctext,

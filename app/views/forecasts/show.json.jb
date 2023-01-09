@@ -1,6 +1,7 @@
 {
 id: @forecast.id,
 zipcode: @forecast.zipcode,
+user_id: @forecast.user_id,
 high: @forecast.high,
 low: @forecast.low,
 average: @forecast.average,
