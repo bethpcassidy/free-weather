@@ -1,7 +1,12 @@
 class ForecastsController < ApplicationController
+  before_action :authenticate_user
+
   def index
-    @forecasts = Forecast.all
-    render :index
+    if current_user
+      @forecasts = Forecast.all
+    else
+      render json: [], status: unauthorized
+    end
   end
 
   def show
@@ -16,8 +21,9 @@ class ForecastsController < ApplicationController
 
   def update
     forecast = Forecast.find_by(id: params[:id])
-    #grabs geocode data for the zipcode
-    zip = params[:zipcode]
+    id = forecast.id
+    zip = forecast.zipcode
+    forecast.destroy
     response = HTTP.get("https://geocode.maps.co/search?postalcode=#{zip}&country=US")
     response = response.parse
     #converts it to 2 decimal float longitude and lat values
@@ -56,14 +62,20 @@ class ForecastsController < ApplicationController
     end
     low = low.to_i
     high = high.to_i
-
-    forecast.high = high
-    forecast.low = low
-    forecast.image = forecast.image
-    forecast.body = misctext
-    forecast.zipcode = forecast.zipcode
-    forecast.title = forecast.title
-
+    #forecast created
+    #name[0]
+    name = name[0]
+    name = name.to_s
+    forecast = Forecast.new(
+      id: id,
+      high: high,
+      low: low,
+      body: misctext,
+      image: params[:image],
+      average: now,
+      zipcode: params[:zipcode],
+      title: name,
+    )
     forecast.save
     render json: forecast.as_json
   end

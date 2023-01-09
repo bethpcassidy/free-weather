@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
+    bcrypt (3.1.18)
     bootsnap (1.15.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -103,6 +104,7 @@ GEM
     irb (1.6.2)
       reline (>= 0.3.0)
     jb (0.8.0)
+    jwt (2.6.0)
     llhttp-ffi (0.4.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
@@ -186,11 +188,13 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   debug
   http
   httpx
   jb
+  jwt
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors

@@ -62,4 +62,27 @@ API info Grabs
 - Real weather is showing up!
 - Information is being grabbed by backend with get requests and I spent the last portion of class getting it to print out basic weather data on the frontend.
 - Created a loop through hourly temperature change information to get a high low index on temperature
-- 
+
+--------------
+
+Thurs JAN 5 2022
+
+New Frontend
+- Update: Changed update to allow a 1 click refresh in the modal. I should call the update method each time the website is opened or maybe create a get weather button that just triggers it. 
+- Update also now is just a button instead of a parameter form.
+- New: New now only requires a zip code.
+- Implemented a new back-end
+
+New Backened
+- Added location name to model via migration.
+- Created basic user authentication bones but haven't required it yet.
+
+Plans: 
+- Implement user authentication in basic functions.
+- Iron out update function
+- Image creating and sorting
+- Move away from cards most likely
+- Multiple pages on REACT
+- Homepage design ideas flushed out (have a concrete plan)
+--------------
+
