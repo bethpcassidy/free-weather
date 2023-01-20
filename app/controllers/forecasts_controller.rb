@@ -41,9 +41,26 @@ class ForecastsController < ApplicationController
     #sort
     weatherhash = response2["current_weather"]
     now = weatherhash["temperature"]
-    misctext = "Current Wind: #{weatherhash["windspeed"]}"
     #low high loop
     temp = response2["hourly"]["temperature_2m"]
+    precipitation = response2["hourly"]["precipitation"]
+    indexp = 0
+    precipsum = 0
+    while indexp < 24
+      precipsum = precipsum + precipitation[indexp]
+      indexp = indexp + 1
+    end
+    rainstring = ""
+    if precipsum > 0.01
+      rainstring = "light drizzles"
+    elsif precipsum > 0.02
+      rainstring = "a chance of showers"
+    elsif precipsum > 0.05
+      rainstring = "showers throughout the day"
+    elsif precipsum < 0.01
+      rainstring = "no precipitation"
+    end
+    misctext = "#{weatherhash["windspeed"]} MPH winds with #{rainstring}"
     index = 0
     low = temp[0]
     high = temp[0]
@@ -112,9 +129,28 @@ class ForecastsController < ApplicationController
     #sort
     weatherhash = response2["current_weather"]
     now = weatherhash["temperature"]
-    misctext = "Current Wind: #{weatherhash["windspeed"]}"
+
     #low high loop
     temp = response2["hourly"]["temperature_2m"]
+    #rain
+    precipitation = response2["hourly"]["precipitation"]
+    indexp = 0
+    precipsum = 0
+    while indexp < 24
+      precipsum = precipsum + precipitation[indexp]
+      indexp = indexp + 1
+    end
+    rainstring = ""
+    if precipsum > 0.01
+      rainstring = "light drizzles"
+    elsif precipsum > 0.02
+      rainstring = "a chance of showers"
+    elsif precipsum > 0.05
+      rainstring = "showers throughout the day"
+    elsif precipsum < 0.01
+      rainstring = "no precipitation"
+    end
+    misctext = "#{weatherhash["windspeed"]} MPH winds with #{rainstring}"
     index = 0
     low = temp[0]
     high = temp[0]

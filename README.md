@@ -1,24 +1,22 @@
-# README
+# EZWeather (Backened)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+EZWeather is a website that gathers and displays weather information for registered users.
 
-Things you may want to cover:
+It uses geocoded api data to determine the weather forecast at the center of a given zipcode, by processing information for the next 24 hour period based on when the last ping was made.
+Generated forecasts are saved to users so that they can be easily accessed on login.
 
-* Ruby version
+# Requirements
 
-* System dependencies
+Ruby 3.1.2
+Rails 7.0.4
 
-* Configuration
+# Install
 
-* Database creation
+`bundle install`
+`rails db:create db:migrate db:seed`
 
-* Database initialization
+and
 
-* How to run the test suite
+`rails s`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+to startup the server.

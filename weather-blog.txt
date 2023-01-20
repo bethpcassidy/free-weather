@@ -1,8 +1,8 @@
-Mon Jan 2nd
+Mon Jan 20th Update
 
 
 
-Nice Weather, an app that shows you the weather for a zip code, no adds fast responses and clean.
+EZWeather, an app that gathers, processes and displays Weather-Data.
 
 
 Functionality
