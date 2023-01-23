@@ -1,14 +1,11 @@
-Mon Jan 20th Update
+Monday Jan 2nd 2023
 
-
-
-EZWeather, an app that gathers, processes and displays Weather-Data.
+EZWeather, an app that collects and displays weather information for registered users.
 
 
 Functionality
 - Users/session data
-- Saved preset locations based on user (up to 3)
-- Non-users can still look for weather
+- Saved preset locations based on user
 - search by zip code, weather pops up
 - Image is pulled from assets to represent current conditions (sun for sunny, cloud for cloudy, etc)
 - Users can have multiple saved forecast locations
@@ -37,7 +34,7 @@ Backend
 ------------------
 
 
-Tues JAN 3rd 2022
+Tuesday JAN 3rd 2023
 
 First Updates
 
@@ -54,7 +51,7 @@ Frontend
 
 --------------
 
-Weds JAN 4th 2022
+Wednesday JAN 4th 2023
 
 API info Grabs
 
@@ -65,7 +62,7 @@ API info Grabs
 
 --------------
 
-Thurs JAN 5 2022
+Thursday JAN 5 2023
 
 New Frontend
 - Update: Changed update to allow a 1 click refresh in the modal. I should call the update method each time the website is opened or maybe create a get weather button that just triggers it. 
@@ -84,5 +81,28 @@ Plans:
 - Move away from cards most likely
 - Multiple pages on REACT
 - Homepage design ideas flushed out (have a concrete plan)
+
 --------------
+
+Tuesday JAN 9 2023
+
+
+Backend
+- The backend weather processing has been cleaned up to show more data per forecast including precipitation and wind speeds. 
+
+Frontend
+- I made a lot of changes in the new and show functions, and added a video background within the NewForecasts function, just some royalty free footage I found online of drone shots of diverse landscapes. Felt it fit the weather theme pretty well and I have seen it a lot in React apps so I wanted to get a handle on how to implement it for myself.
+- A lot of the spacing in the frontend has been cleaned up with changes to the modal and the search function, making the website easier to read overall.
+
+
+---------
+
+Wednesday Jan 10 2023
+
+
+- Today I presented my app to my class and I was able to hit my MVP but definitely have a few things I want to continue and implement just to make it more user friendly and closer to a finished project than the prototype it currently is. 
+- Visual elements are definitely missing from the data side so I think that'll be my biggest focus moving forward.
+- I want to go at least for a 72 hour forecast and create graphs for the data to fill itself and get weather images fully functioning.
+- Another idea is to implement an image search that matches the location of the geocode to set a theme for the forecast, (I.e. close to cities shows a city, rural areas show landscape, etc)
+- Overall I am happy about where I have gotten so far in this project and am excited to push forward and expand it's functionality.
 

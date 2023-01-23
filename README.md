@@ -13,6 +13,7 @@ Rails 7.0.4
 # Install
 
 `bundle install`
+
 `rails db:create db:migrate db:seed`
 
 and
@@ -20,3 +21,5 @@ and
 `rails s`
 
 to startup the server.
+
+To view the designed frontend, check it out here and follow the instructions: https://github.com/bethpcassidy/weather-frontend
